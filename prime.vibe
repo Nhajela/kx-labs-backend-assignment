@@ -1,0 +1,50 @@
+// Program 2: Prime Sieve till 50
+// initialize variables and create number list
+main_character_energy(max_limit, 50)
+scribble_note("starting prime hunt up to " + max_limit)
+
+remember_this_as(numbers, creative_clutter(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50))
+remember_this_as(primes, creative_clutter())
+
+// check if we have numbers to work with
+try_this_wild_idea { same_vibe(length(numbers), 0) } {
+    sus_behavior_detected("no numbers to check, something went wrong")
+}
+
+remember_this_as(i, 0)
+keep_going_until_bored {
+    try_this_wild_idea { weaker_vibe(i, length(numbers)) } {
+        remember_this_as(current, numbers[i])
+        remember_this_as(is_prime, good_vibes)
+        
+        // check for divisors from 2 to current-1
+        remember_this_as(j, 2)
+        keep_going_until_bored {
+            try_this_wild_idea { weaker_vibe(j, current) } {
+                try_this_wild_idea { same_vibe(slice_evenly(current, j), 0) } {
+                    remember_this_as(is_prime, bad_vibes)
+                    break
+                }
+                remember_this_as(j, raise_the_stakes(j))
+            }
+            otherwise_maybe {
+                break
+            }
+        }
+        
+        // add to prime list if no divisors found
+        try_this_wild_idea { check_vibe(is_prime) } {
+            add_to_clutter(primes, current)
+            scribble_note("found prime: " + current)
+        }
+        
+        remember_this_as(i, raise_the_stakes(i))
+    }
+    otherwise_maybe {
+        break
+    }
+}
+
+shout_excitedly("Prime numbers up to " + max_limit + ":")
+console.log(primes)
+spill_the_tea("prime hunting mission completed successfully")

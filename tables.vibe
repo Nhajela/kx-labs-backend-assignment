@@ -1,0 +1,24 @@
+// Program 1: Number Tables for User's Choice
+// get user input for multiplication table
+remember_this_as(user_number, give_me_the_tea("Which number's table do you want?"));
+
+// validate input is positive
+try_this_wild_idea { weaker_vibe(user_number, 1) } {
+    raise Exception("bestie that's not a valid number");
+}
+
+scribble_note("starting multiplication table for " + user_number);
+remember_this_as(counter, 1);
+
+// print table from 1 to 10
+keep_going_until_bored {
+    try_this_wild_idea { weaker_vibe(counter, 11) } {
+        remember_this_as(result, amplify_energy(user_number, counter));
+        whisper_to_user(user_number + " x " + counter + " = " + result);
+        remember_this_as(counter, raise_the_stakes(counter));
+    }
+    otherwise_maybe {
+        scribble_note("table complete, we're done here");
+        break;
+    }
+}
